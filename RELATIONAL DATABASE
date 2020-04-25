@@ -4,3 +4,19 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 %matplotlib inline
+
+con = sqlite3.connect('')
+cursor = con.cursor()
+
+conn = sqlite3.connect('my_database.sqlite')
+cursor = conn.cursor()
+conn.execute("UPDATE ..... set  = 25...0 where .. = 3")
+conn.commit()
+for row in cursor.execute("SELECT ..., ..., ..., .... from ...."):
+print(" = ", row[0])
+   print(" = ", row[1])
+   print(" = ", row[2], "\n")
+conn.commit()
+conn.close()
+
+
